@@ -1,0 +1,406 @@
+/*
+    Adapted from https://eggramen.neocities.org/code/css/misc/fakewp2_skin2
+    THANK YOU EGGRAMEN!
+*/
+
+:root {
+  --smoky-black: #1A1309ff;
+  --smoky-black-2: #110B05ff;
+  --night: #0D1309ff;
+  --space-cadet: #1E2236ff;
+  --bistre: #40281Cff;
+}
+
+body {
+  background: #fff;
+  font-size: 0.875em;
+  font-family: monospace;
+  padding: 0;
+  margin: 0;
+  
+  background: linear-gradient(rgb(251, 220, 220, 0.1), rgb(251, 220, 220, 0.1)), url("res/images/leaves3.jpg");
+  /* Dim grey overlay over BG  */
+  /*background: url("res/images/leaves3.jpg");*/
+}
+
+.wrapper {
+  background: none;
+  top: 0;
+  margin: 0 auto;
+  width: 880px;
+}
+
+.sidebar-left,
+.sidebar-right {
+  width: 175px;
+}
+
+.bobanimate
+{
+  animation: bobbingAnimation 3s ease-in-out infinite;
+}
+
+/* Keyframes for the bobbing animation */
+@keyframes bobbingAnimation {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-3px); /* Adjust the value to control the bobbing distance */
+  }
+}
+
+.main {
+  width: 500px;
+  margin-left: 190px;
+}
+
+.sidebar-left {
+  margin-left: 0px;
+}
+
+.center-content {
+  margin: 0 auto;
+  text-align: center;
+  padding: 10px;
+}
+
+.center-text-thin {
+  margin: 0 auto;
+  width: 630px;
+  padding: 10px;
+}
+
+.wrapper,
+.links a {
+  color: #D8D5B6;
+  font-size: 12px;
+}
+
+.box {
+  border: 3px double #7F726B;
+  background: #1A1309;
+  padding: 0;
+}
+.box-img
+{
+  border: 3px double #7F726B;
+}
+
+
+
+.header {
+  border: 3px double #7F726B;
+  /*background: linear-gradient(rgb(251, 220, 220, 0.75), rgb(251, 220, 220, 0.75));*/
+  background: linear-gradient(rgb(17, 11, 5, 0.75), rgb(17, 11, 5, 0.75));
+  text-align: center;
+  margin-top: 15px;
+  top: 0;
+  height: auto;
+}
+
+.links {
+  margin-top: 1em;
+}
+
+.title {
+  /*suppress title, since we're putting the title as text in the header box*/
+  display: none;
+}
+
+.footer {
+  bottom: 0;
+  margin: 0 auto;
+  text-align: center;
+  background: rgb(17, 11, 5, 0.75);
+  width: 500px;
+  height: 40px;
+}
+
+.footer a {
+  color: red;
+}
+
+.green
+{
+    color: greenyellow;
+}
+
+.lightred
+{
+    color: rgb(255, 125, 125);
+}
+
+.box h1 {
+  background: #40281C;
+  margin: 0;
+  padding: 0.35em 0.25em 0.3em 0.5em;
+  text-align: center;
+  border-bottom: 3px double #5B524E;
+}
+
+.box h2,
+.box h3,
+.box h4 {
+  background: #40281C;
+  margin: 0;
+  padding: 0.35em 0.25em 0.3em 0.5em;
+  text-align: left;
+  border-bottom: 3px double #5B524E;
+}
+
+.inner {
+  padding: 0.25em 1em 0.3em 1em;
+  font-size: 1.075em;
+  display: block;
+}
+
+.box-date {
+  border: 1px single #7F726B;
+  background: rgb(17, 11, 5, 0.75);
+  margin: 0;
+  padding: 0em 0em 0em 0.5em;
+  text-align: center;
+}
+
+.inner a {
+  color: red;
+}
+
+.inner-center {
+  align-content: center;
+  text-align: center;
+}
+
+ul.no-bullets {
+  list-style-type: none;
+  /* Remove bullets */
+  padding: 0;
+  /* Remove padding */
+  padding-left: 10px;
+  margin: 1;
+  /* Remove margins */
+  left: 10px;
+}
+
+ul.no-bullets a {
+  color: #D8D5B6;
+}
+
+.link-highlight {
+  color: red;
+}
+
+/*
+.overlay {
+  position: absolute;
+  top: 25%;
+  left: 25%;
+  z-index: 10;
+  transform: translate(-75%, -75%);
+  /*background-color: rgba(0,0,0,0.5); /*dim the background
+}*/
+
+* {box-sizing:border-box}
+
+/* Slideshow container */
+.slideshow-container {
+  max-width: 1000px;
+  position: relative;
+  margin: auto;
+}
+
+/* Hide the images by default */
+.mySlides {
+  display: none;
+}
+
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  margin-top: -22px;
+  padding: 16px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+
+/* Basic styling for the grid container */
+.thumbnail-grid {
+  padding: 17px;
+  display: grid;
+  grid-template-columns: repeat(5, 160px); /* You can adjust the number and size of columns */
+  gap: 10px;
+}
+
+/* Styling for the individual thumbnails */
+.thumbnail {
+  position: relative; /* Required for positioning the hover text */
+  width: 160px;
+  height: 160px;
+  border: 1px solid #ccc;
+  overflow: hidden;
+  transition: transform 0.025s linear;
+}
+
+/* Styling for the image inside the parent div */
+.thumbnail img {
+  
+  /* NOTE: thumb images should be square */
+
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+/* CSS to grow the thumbnail on hover */
+.thumbnail:hover {
+  transform: scale(1.05);
+}
+
+/* Styling for the hover text */
+.hover-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  visibility: hidden;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: #fff;
+  transition: opacity 0.025s ease-in-out, visibility 0s linear 0.2s;
+  z-index: 1;
+}
+
+/* Show the hover text on mouse over */
+.thumbnail:hover .hover-text {
+  opacity: 1;
+  visibility: visible;
+  transition-delay: 0s;
+}
+
+.center-text
+{
+  padding: 45px 0;
+  text-align: center;
+}
+
+/* Styling for the overlay images */
+.overlay-plant-1 {
+  position: absolute;
+  top: 8%; /* Adjust the vertical position as needed */
+  left: 95%; /* Adjust the horizontal position as needed */
+  transform: translate(-50%, -50%);
+  pointer-events: none; /* Ensure the images don't interfere with clicking the elements */
+  z-index: 999; /* Set a high z-index to place the images above other content */
+}
+.overlay-plant-2 {
+  position: absolute;
+  top: 0%; /* Adjust the vertical position as needed */
+  left: -15%; /* Adjust the horizontal position as needed */
+  transform: translate(-50%, -50%);
+  pointer-events: none; /* Ensure the images don't interfere with clicking the elements */
+  z-index: 999; /* Set a high z-index to place the images above other content */
+}
+.overlay-plant-3 {
+  position: absolute;
+  top: 90%; /* Adjust the vertical position as needed */
+  left: 22%; /* Adjust the horizontal position as needed */
+  transform: translate(-50%, -50%);
+  pointer-events: none; /* Ensure the images don't interfere with clicking the elements */
+  z-index: 999; /* Set a high z-index to place the images above other content */
+}
+.overlay-plant-4 {
+  position: absolute;
+  top: 0%; /* Adjust the vertical position as needed */
+  left: 100%; /* Adjust the horizontal position as needed */
+  transform: translate(-50%, -50%);
+  pointer-events: none; /* Ensure the images don't interfere with clicking the elements */
+  z-index: 999; /* Set a high z-index to place the images above other content */
+}
+
+/* Container for the scrolling text */
+.scroll-container {
+  overflow: hidden;
+  white-space: nowrap;
+  width: 150px; /* Adjust the width as needed */
+}
+
+/* The scrolling animation */
+@keyframes scroll-text {
+  0% { transform: translateX(100%); }
+  100% { transform: translateX(-100%); }
+}
+
+/* The text element to be scrolled */
+.scroll-text {
+  display: inline-block;
+  animation: scroll-text 10s linear infinite; /* Adjust the animation duration as needed */
+}
+
+/* Caption text */
+.text {
+  color: #f2f2f2;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  animation-name: fade;
+  animation-duration: 0.25s;
+}
+
+@keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
