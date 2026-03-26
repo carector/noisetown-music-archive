@@ -155,6 +155,20 @@ body {
   display: block;
 }
 
+.inner-medium {
+  padding: 0.25em 1em 0.3em 1em;
+  font-size: 1.075em;
+  line-height: 1.4;
+  display: block;
+}
+
+.inner-big {
+  padding: 0.25em 1em 0.3em 1em;
+  font-size: 1.075em;
+  line-height: 1.65;
+  display: block;
+}
+
 .box-date {
   border: 1px single #7F726B;
   background: rgb(17, 11, 5, 0.75);
