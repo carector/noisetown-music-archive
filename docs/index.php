@@ -1,9 +1,5 @@
 <!DOCTYPE html>
 <html>
-
-<!-- There are a few particularly heinous songs I couldn't bring myself to list on this page.
-      I commented them out, but you can still access them below if you REALLY want to. -->
-
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -32,7 +28,6 @@
     <div class=header>
       <div class=header-shadow>
         <h1 class="bobanimate">The Noisemaker Music Archive</h1>
-        <!--<a href="/index.html"><img class="bobanimate" src="res/images/logoAnimated.gif"></img></a>!-->
       </div>
     </div>
 
@@ -95,16 +90,13 @@
                 // Bloodcurdling regular expression
                 $exp = "/(?!.*\/).*/";
                 preg_match($exp, $file, $matches);
-                echo '<li><a href="file:///' . $file . '">' . $matches[0] . '</a></li>';
+                $url = '/res/audio/archive/'.$yearInt.'/'.$matches[0];
+                echo '<li><a href="'.$url. '">' . $matches[0] . '</a></li>';
               } ?>
             </ul>
           </div>
         </div>
       <?php } ?>
-
-      <!-- <div class="box">
-        <div class="center-content">Last updated 3/20/2026</div>
-      </div> -->
     </div>
   </div>
   <br>
