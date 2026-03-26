@@ -95,21 +95,21 @@
                 // Bloodcurdling regular expression
                 $exp = "/(?!.*\/).*/";
                 preg_match($exp, $file, $matches);
-                echo '<li><a href="' . $file . '">' . $matches[0] . '</a></li>';
+                echo '<li><a href="file:///' . $file . '">' . $matches[0] . '</a></li>';
               } ?>
             </ul>
           </div>
         </div>
       <?php } ?>
 
-      <div class="box">
+      <!-- <div class="box">
         <div class="center-content">Last updated 3/20/2026</div>
-      </div>
+      </div> -->
     </div>
   </div>
   <br>
   <div class=footer>
-    <p>Site by Noisemaker 2022-2026. Original template by <a
+    <p>Site by Noisemaker 2022-20XX. Original template by <a
         href="https://eggramen.neocities.org/code/css_testpages">EGGRAMEN</a></p>
   </div>
   </div>
