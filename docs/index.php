@@ -15,7 +15,8 @@
 
   // Get archive path
   $path = getcwd() . "/res/audio/archive/";
-  $years = glob($path . "*");
+  $years2 = glob($path . "*");
+  $years = array_reverse($years2);    // Display most recent content first
 
   // Get total song count
   $filecount = 0;
