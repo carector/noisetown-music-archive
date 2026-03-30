@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html>
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -17,7 +18,7 @@
   $path = getcwd() . "/res/audio/archive/";
   $years2 = glob($path . "*");
   $years = array_reverse($years2);    // Display most recent content first
-
+  
   // Get total song count
   $filecount = 0;
   foreach ($years as $year) {
@@ -58,9 +59,8 @@
           <div class=inner>
             <p>By some miracle I've kept backups of nearly every single .flp file I've made since 2013. This page
               contains everything I've made under the Noisemaker alias that I can share.</p>
-            <!-- <p>I've highlighted my favorites in <element class="green">green.</element> 
-              -->
-            <p>The filenames of the songs are unchanged. You can't make this stuff up.</p>
+            <p>I've highlighted my favorites in <element class="green">green.</element>
+              The filenames of the songs are unchanged. You can't make this stuff up.</p>
             <p>Enjoy the following slurry of audio files. <element class="lightred">KEEP YOUR VOLUME LOW!</element>
             </p>
 
@@ -91,8 +91,13 @@
                 // Bloodcurdling regular expression
                 $exp = "/(?!.*\/).*/";
                 preg_match($exp, $file, $matches);
-                $url = '/res/audio/archive/'.$yearInt.'/'.$matches[0];
-                echo '<li><a href="'.$url. '">' . $matches[0] . '</a></li>';
+                $url = '/res/audio/archive/' . $yearInt . '/' . $matches[0];
+                echo '<li><a href="' . $url . '">';
+                if (str_contains($url, '★')) {
+                  echo '<element class="green">' . $matches[0] . '</element>';
+                } else
+                  echo $matches[0];
+                echo '</a></li>';
               } ?>
             </ul>
           </div>
@@ -107,4 +112,5 @@
   </div>
   </div>
 </body>
+
 </html>
